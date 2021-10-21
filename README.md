@@ -13,7 +13,7 @@ Pour lancer une partie, il faut préalablement lancer un serveur.
 Normalement vous devriez voir dans votre terminal la ligne 
 ``listening on *:3000``
 
-Vous pouvez maintenant vous rendre à l'adresse ``localhost:3000`` ou encore ```127.0.0.1:3000`` sur votre navigateur préféré pour voir s'afficher l'écran d'acceuil du jeu !
+Vous pouvez maintenant vous rendre à l'adresse ``localhost:3000`` ou encore ``127.0.0.1:3000`` sur votre navigateur préféré pour voir s'afficher l'écran d'acceuil du jeu !
 
 ## Lancer une partie
 
