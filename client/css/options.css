@@ -1,0 +1,99 @@
+#preview-options {
+
+  position: fixed;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  height: 100%;
+  padding: 0;
+  color: white;
+  font-size: 15px;
+  background-color: rgb(189, 195, 199);
+  box-shadow: inset 0 0 12px 1px rgba(0, 0, 0, 0.2);
+  transform: translateX(-100%);
+
+}
+
+#preview-options-button {
+
+  position: fixed;
+  top: 20px;
+  left: 0;
+  height: 60px;
+  width: 150px;
+  background-color: white;
+  border-radius: 0 40px 40px 0;
+  font-size: 17px;
+  border: none;
+  box-shadow: 0 0 12px 1px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s linear;
+
+}
+
+#preview-options-button:hover {
+
+  width: 170px;
+
+}
+
+#preview-options #options-close-button {
+
+  top: 20px;
+  right: 20px;
+
+}
+
+#preview-options h2 {
+
+  margin: 20px auto;
+  padding: 0;
+  width: fit-content;
+  font-weight: normal;
+  font-size: 20px;
+
+}
+
+#preview-options h3 {
+
+  background-color: #95a5a6;
+  color: white;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-weight: normal;
+
+}
+
+#preview-options label {
+
+  font-size: 12px;
+  margin: 10px auto;
+  margin-bottom: -5px;
+  width: 90%;
+
+}
+
+#preview-options input {
+
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 5px;
+  width: 90%;
+  box-sizing: border-box;
+  border: none;
+  transition: all 0.2s linear;
+  outline: none;
+
+}
+
+#preview-options p {
+
+  text-align: center;
+  margin-top: 50px;
+  font-size: 17px;
+
+}

@@ -1,0 +1,78 @@
+
+#preview-title {
+
+  position: fixed;
+  top: 20px;
+  margin: auto;
+  width: fit-content;
+  font-size: 30px;
+  font-weight: normal;
+
+}
+
+#gameId-preview {
+
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  font-weight: bold;
+
+}
+
+#preview-frame {
+
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+
+}
+
+#players-preview {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: fit-content;
+  height: fit-content;
+  min-height: 200px;
+  max-height: 70%;
+  border-radius: 5px;
+  padding: 10px;
+
+}
+
+#players-preview .player-preview {
+
+  width: 350px;
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 40px;
+  font-size: 15px;
+  margin: 5px;
+  text-align: center;
+  box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.2);
+
+}
+
+#players-preview .player-preview[ready="false"] {
+
+  background-color: rgb(246, 250, 251);
+  color: black;
+
+}
+
+#players-preview .player-preview[ready="true"] {
+
+  background-color: #2ecc71;
+  color: white;
+
+}

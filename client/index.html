@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Rummikub</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/preview.css">
+    <link rel="stylesheet" href="/css/options.css">
+    <link rel="stylesheet" href="/css/chat.css">
+    <link rel="stylesheet" href="/css/previewButtons.css">
+    <link rel="stylesheet" href="/css/game.css">
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body>
+
+    <!-- LOGIN FRAME -->
+    <article id="login-frame" class="frame">
+      <h1 id="login-title">Rummikub</h1>
+      <section id="login-pseudo-panel">
+        <p>Qui êtes-vous ?</p>
+        <input id="pseudo" type="text" name="" value="" placeholder="Votre pseudo ici">
+      </section>
+      <section id="login-play-panel">
+        <div class="login-subsection">
+          <button type="button" name="button" onclick="createGame()">Créer une Game</button>
+        </div>
+        <div class="login-subsection">
+          <input id="game-id" type="text" value="" placeholder="Code de la partie">
+          <button type="button" name="button" onclick="joinGame()">Rejoindre une Game</button>
+        </div>
+      </section>
+    </article>
+
+    <!-- PREVIEW FRAME / BEFORE GAME START -->
+    <article id="preview-frame" class="frame" style="display:none">
+      <h1 id="preview-title">Code <span id="gameId-preview">???</span></h1>
+      <section id="preview-options" state="nohost" class="panel" panel-state="closed" panel-translation-x="-100%">
+        <button id="options-close-button" class="close-button" type="button" onclick="openPanel('preview-options')">❌</button>
+        <h3 style="margin-top: 100px">Les joueurs 🕺</h3>
+        <label for="nbplayermax">Max. joueurs</label>
+        <input id="nbplayermax" type="number" onkeyup="checkEnter(event, changeOptions, this)" disabled min="2" max="8" value="4">
+        <label for="nbplayertobegin">Nb joueur pour commencer</label>
+        <input id="nbplayertobegin" type="number" onkeyup="checkEnter(event, changeOptions, this)" disabled min="2" max="8" value="2">
+        <h3>La partie 🎲</h3>
+        <label for="multiplierpioche">Nb de paquet de cartes</label>
+        <input id="multiplierpioche" type="number" onkeyup="checkEnter(event, changeOptions, this)" disabled min="1" max="8" value="1">
+        <p> Validation au clavier ⌨, appuyer sur la touche Entrer </p>
+      </section>
+      <button id="preview-options-button" type="button" onclick="openPanel('preview-options')" style="transform: translateX(-100%)">Options 🔩</button>
+      <section id="players-preview">
+        <h2>Liste des joueurs</h2>
+      </section>
+      <section id="preview-buttons">
+        <button id="preview-ready-button" type="button" name="button" onclick="ready()">Vous êtes prêt ? 👍</button>
+      </section>
+    </article>
+
+    <!-- GAME FRAME -->
+    <article id="game-frame" class="frame" style="display: none;">
+      <div id="plateau"></div>
+      <section id="family-creator">
+        <button id="family-creator-close-button" class="close-button" type="button" onclick="openFamilyCreator()">❌</button>
+        <div id="new-family-container"></div>
+        <button id="family-creator-valid-button" class="close-button" type="button" onclick="sendRequestForNewFamily()">Créer la famille</button>
+      </section>
+      <section id="game-advs">
+
+      </section>
+      <section id="hand" style="bottom: 0px">
+        <section id="hand-buttons">
+          <button id="hand-hide-button" type="button" class="hand-button" onclick="hideHand()"> Cacher </button>
+          <button id="hand-hide-button" type="button" class="hand-button" onclick="openFamilyCreator()"> Ajouter une nouvelle famille </button>
+          <button id="pioche-card-button" type="button" disabled class="hand-button" onclick="piocheCard()"> Piocher </button>
+          <button id="end-turn-button" type="button" disabled class="hand-button" onclick="endTurn()"> Finir son tour </button>
+        </section>
+        <section id="hand-card-container">
+          
+        </section>
+      </section>
+      <div id="card-decoy" class="card"></div>
+      <section id="end-game">
+        <h1 id="end-game-title">Tu n'as pas encore gagné ;)</h1>
+        <button id="end-game-button" type="button" onclick="rejouer()">Rejouer ?</button>
+      </section>
+    </article>
+
+    <!-- CHAT PANEL -->
+    <article id="chat" class="panel" panel-state="closed" panel-translation-x="100%">
+      <button id="chat-close-button" class="close-button" type="button" onclick="openPanel('chat')">❌</button>
+      <section id="chat-messages">
+      </section>
+      <section id="chat-input">
+        <input id="chat-sender" onkeyup="checkEnter(event, sendMessage)" type="text" name="" value="" placeholder="votre message ici">
+      </section>
+    </article>
+    <button id="chat-open-button" type="button" onclick="openPanel('chat'); checkNotif();" style="transform: translateX(100%)">Chat 💬</button>
+
+  </body>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/javas/const.js"></script>
+  <script src="/javas/utils.js"></script>
+  <script src="/javas/ClientManager.js"></script>
+  <script src="/javas/listener.js"></script>
+  <script src="/javas/plateauEvents.js"></script>
+  <script src="/javas/gameengine.js"></script>
+  <script src="/javas/player.js"></script>
+  <script src="/javas/chatmanager.js"></script>
+  <script src="/javas/gamemanager.js"></script>
+  <script src="/javas/familymanager.js"></script>
+  <script src="/javas/java.js"></script>
+
+</html>

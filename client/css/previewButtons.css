@@ -1,0 +1,32 @@
+
+#preview-buttons {
+
+  position: fixed;
+  bottom: 0;
+  margin: 10px auto;
+
+}
+
+#preview-buttons button {
+
+  margin: 10px;
+  padding: 10px 30px;
+  border-radius: 40px;
+  background-color: white;
+  outline: none;
+  border: none;
+  width: fit-content;
+  height: 50px;
+  box-sizing: content-box;
+  font-size: 17px;
+  box-shadow: 0 0 12px 1px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s linear;
+  cursor: pointer;
+
+}
+
+#preview-buttons button:hover {
+
+  padding: 10px 40px;
+
+}

@@ -1,0 +1,99 @@
+
+#login-title {
+
+  font-size: 50px;
+  position: fixed;
+  top: 20px;
+  width: fit-content;
+  margin: auto;
+  color: #e74c3c;
+
+}
+
+#login-frame {
+
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  top: calc(50% - 200px);
+  left: calc(50% - 200px);
+
+}
+
+#login-pseudo-panel {
+
+  position: fixed;
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+  text-align: center;
+
+}
+
+#login-pseudo-panel p {
+
+  font-size: 20px;
+
+}
+
+#pseudo {
+
+  font-size: 20px;
+
+}
+
+#login-play-panel {
+
+  position: fixed;
+  bottom: 0px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#login-play-panel .login-subsection {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#login-frame input {
+
+  border: none;
+  padding: 20px;
+  border-radius: 30px;
+  outline: none;
+  text-align: center;
+
+}
+
+#login-frame button {
+
+  margin: 10px;
+  padding: 20px 45px 20px 45px;
+  outline: none;
+  border: none;
+  background-color: #1abc9c;
+  color: white;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.2s linear;
+
+}
+
+#login-frame button:hover {
+
+  font-size: 17px;
+
+}
