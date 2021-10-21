@@ -1,4 +1,4 @@
-# rummikub
+# Rummikub en ligne
 Jeu de table "Rummikub" en ligne grâce à socket.io
 
 # Fonctionnement
@@ -45,3 +45,7 @@ Ici, je ne détaillerai que la méthode pour jouer ensemble sur un même réseau
 Pour jouer ensemble sur un même réseau, rien de plus simple (je mens, manger des _Princes_ c'est bien plus facile et en plus meilleurs) ! Il suffit pour les joueurs non-hôte, de rentrer l'adresse de l'hote à la place de ``localhost`` ou ``127.0.0.1`` dans l'URL du navigateur.
 
 __exemple__: si l'adresse de l'hote sur le réseau est ``192.168.0.21``, alors tous les autres que l'hote devront entrer dans leur navigateur ```192.168.0.21:3000`` comme URL pour se connecter au serveur puis copier le code la partie comme indiquer dans la section plus haut. (Vous pouvez obtenir votre adresse sur le réseau grâce à la commande ``ipconfig`` dans un terminal windows ligne ``Adresse IPv4``)
+
+## Crédits
+
+Mamie je te kiff de ouf ❤️
